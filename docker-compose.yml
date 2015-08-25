@@ -1,0 +1,11 @@
+php:
+  build: php
+  volumes:
+    - ./src:/src
+
+web:
+  build: web
+  ports:
+    - "80:80"
+  links:
+    - php:php
